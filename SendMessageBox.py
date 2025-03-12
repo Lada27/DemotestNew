@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import (
     QMessageBox
 )
-
+# итформационное сообщение
 def send_I_message(message_text: str):
     messageBox = QMessageBox()
     messageBox.setText(message_text)
@@ -10,6 +10,7 @@ def send_I_message(message_text: str):
     result = messageBox.exec()
     return result
 
+# критическое сообщение
 def send_C_message(message_text: str):
     # Создание объекта сообщение
     message = QMessageBox()

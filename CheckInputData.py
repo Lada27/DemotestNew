@@ -1,3 +1,4 @@
+# проверка входных данных
 def start_check(partners_input_data: dict):
     if (
             check_inn(partners_input_data['inn']) and

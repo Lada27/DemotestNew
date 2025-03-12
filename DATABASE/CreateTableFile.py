@@ -2,7 +2,7 @@ import psycopg2
 
 from CONFIG import *
 
-
+# создание таблиц
 query_partners_import = '''
     create table partners_import (
     partner_type nchar(3) not null,

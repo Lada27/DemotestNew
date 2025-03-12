@@ -16,7 +16,7 @@ from PartnerStatic import Partner
 
 from SendMessageBox import *
 
-
+# главный класс
 class MainApplicationClass(QWidget):
     def __init__(self):
 
@@ -29,6 +29,7 @@ class MainApplicationClass(QWidget):
 
         self.frames_container = QStackedWidget()
 
+        # открытие окна карточек партнеров
         partner_cards_frame = PartnersCardFrame.PartnerCardsClass(self)
         self.frames_container.addWidget(partner_cards_frame)
 
@@ -36,6 +37,8 @@ class MainApplicationClass(QWidget):
         layout.addWidget(
             self.frames_container)
 
+
+    # поменять фрейм
     def switch_frames(self, need_frame_name, partner_name=None):
         if partner_name:
             Partner.set_name(partner_name)
@@ -89,6 +92,7 @@ font-size: 30px;
 
 '''
 
+# запуск приложения
 application = QApplication(sys.argv)
 application.setStyleSheet(styles_sheet)
 main_class_object = MainApplicationClass()
